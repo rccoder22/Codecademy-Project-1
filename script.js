@@ -4,4 +4,7 @@ const url = "https://catfact.ninja/fact";
 
 const response = fetch(url)
  .then(res => res.json())
-  .then(data => console.log(data.fact));
+  .then(data => 
+    {console.log(data.fact);
+        fact.textContent = data.fact;
+    });
