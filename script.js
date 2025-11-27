@@ -3,7 +3,7 @@ const fact = document.getElementById("cat-fact");
 const url = "https://catfact.ninja/fact";
 const button = document.getElementById("cat-fact-btn");
 // const pixabayURL = "https://pixabay.com/api/";
-const image = document.getElementById("cat-image");
+const image = document.getElementById("cat-photo");
 const pixabayURL = `https://pixabay.com/api/?key=${pixabayApiKey}&q=cat&image_type=photo`;
 
 function getFact() {
@@ -17,8 +17,7 @@ function getFact() {
         .then(res => res.json())
         .then(data =>
             {console.log(data.hits[0]);
-                console.log(pixabayURL);
-            image.src = data.image;
+            image.src = data.hits[0].webformatURL;
     });
 }
 
