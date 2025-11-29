@@ -20,5 +20,16 @@ function getFact() {
     });
 }
 
+function playButtonClickSound() {
+  // Load the sound file
+fetch('button_click.wav')
+  .then(response => response.arrayBuffer())
+  .then(arrayBuffer => audioCtx.decodeAudioData(arrayBuffer))
+  .then(audioBuffer => {
+    buttonClickBuffer = audioBuffer;
+  });   
+  if (!buttonClickBuffer) return; // Ensure sound is loaded
+}
+
 
 button.addEventListener('click', getFact);
