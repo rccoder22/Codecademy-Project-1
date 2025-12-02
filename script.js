@@ -6,12 +6,14 @@ const image = document.getElementById("cat-photo");
 const pixabayURL = `https://pixabay.com/api/?key=${pixabayApiKey}&q=cat&image_type=photo`;
 
 function getFact() {
+    // Facts API
     fetch(url)
         .then(res => res.json())
         .then(data =>
             {console.log(data.fact);
             fact.textContent = data.fact;
     });
+    // Image API
     fetch(pixabayURL)
         .then(res => res.json())
         .then(data =>
