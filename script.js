@@ -3,7 +3,7 @@ const fact = document.getElementById("cat-fact");
 const url = "https://catfact.ninja/fact";
 const button = document.getElementById("cat-fact-btn");
 const image = document.getElementById("cat-photo");
-const pixabayURL = `https://pixabay.com/api/?key=${pixabayApiKey}&q=cat&image_type=photo`;
+const pixabayURL = `https://pixabay.com/api/?key=${pixabayApiKey}&q=cat&image_type=photo&orientation=horizontal`;
 
 function getFact() {
     // Facts API
