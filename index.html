@@ -7,16 +7,27 @@
     <script script src="https://cdn.tailwindcss.com"></script>
     <title>Random Cat Facts</title>
 </head>
-<body class="min-h-screen bg-gradient-to-bl from-cyan-500 via-cyan-400 to-cyan-500 text-white flex items-center justify-center">
+
+<!-- Body establishes background gradient and centers the overall layout -->
+<body class="min-h-screen bg-gradient-to-bl from-cyan-500 via-cyan-200 to-cyan-500 text-white flex items-center justify-center">
     <main>
+        <!-- Container with fixed dimensions and Tailwind styling for spacing and visuals -->
         <div class="w-[450px] h-[550px] bg-indigo-950/80 border border-slate-700 rounded-2xl shadow-xl p-6 flex flex-col gap-4">
+            
+            <!-- Title section: centered heading for the app -->
             <section id="cat-name" class="text-center">
                 <h1 class="font-bold text-3xl">Random Cat Facts</h1>
             </section>
+
+            <!-- Image section: default image, fixed height, and styled border -->
             <section id="cat-image" class="h-60 bg-blue-600/20 border border-white-700 rounded">
                 <img src="Assets/IMG_5811.jpeg" id="cat-photo" alt="Random-Cat-Pic" class="rounded shadow-md w-full h-full object-cover">
             </section>
+
+            <!-- Fact section: placeholder text, text sizing, and flexible box spacing -->
             <section id="cat-fact" class="border border-white-700 bg-blue-600/20 rounded text-sm p-4 overflow-auto flex-1">Random cat fact here!</section>
+
+            <!-- Button: styled with Tailwind and triggers the fact update -->
             <button id="cat-fact-btn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Press for facts</button>
         </div>
     </main>
